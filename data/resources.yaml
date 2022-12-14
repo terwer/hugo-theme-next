@@ -64,11 +64,11 @@ waline:
 artalk:
   js:
     name: artalk
-    version: 2.3.4
+    version: 2.4.3
     file: dist/Artalk.js
   css:
     name: artalk
-    version: 2.3.4
+    version: 2.4.3
     file: dist/Artalk.css
 
 giscus:
