@@ -30,15 +30,6 @@
   {{- printf (T "FooterPowerby") $pb | safeHTML }}
 </div>
 {{- end }}
-{{- with $ft.beian }}
-{{- if .enable }}
-<div class="beian">
-  <a href="https://beian.miit.gov.cn" target="_blank">{{ .icp }}</a>
-  <img src="/imgs/gongan.png" alt="{{ .provinceAbbr }}公网安备">
-  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ .gonganNum }}" target="_blank">{{ .provinceAbbr }}公网安备 {{ .gonganNum }} 号</a>
-</div>
-{{- end }}
-{{- end }}
 {{- with $ft.vendors }}
 {{ if .enable }}
 <div class="vendors-list">
@@ -54,6 +45,17 @@
    <span>{{ .title }}</span>
 </div>
 {{- end }} 
+{{- end }}
+{{- with $ft.beian }}
+{{- if .enable }}
+<div class="beian">
+  <a href="https://beian.miit.gov.cn" target="_blank">{{ .icp }}</a>
+  <!--
+  <img src="/imgs/gongan.png" alt="{{ .provinceAbbr }}公网安备">
+  <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode={{ .gonganNum }}" target="_blank">{{ .provinceAbbr }}公网安备 {{ .gonganNum }} 号</a>
+  -->
+</div>
+{{- end }}
 {{- end }}
 
 {{- $custom := .Scratch.Get "footer" }}
